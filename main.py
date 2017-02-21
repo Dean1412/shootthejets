@@ -188,7 +188,7 @@ while yorn != 'y':
     print('An important thing you should remember is a jet won\'t overlap the others.')
     print_list(p1_list)
     yorn = input('If you understand,enter "y",if not,just press "Enter" key to reread.')
-
+    guesscount = 0
 clear()
 
 while head_count < 3:
@@ -196,7 +196,8 @@ while head_count < 3:
     pos_input_str = input('Please enter the position you want to fire(Row first then column) e.g. "19" :')
     pos_input = [int(pos_input_str[0]),int(pos_input_str[1])]
     guess(pos_input,view_list,p0_list)
+    guesscount += 1
     clear()
     print(pos_input)
 print_list(p0_list)
-print('Congrats!You have found all jets!')
+print('Congrats!You have found all jets! Your total guess:%s' % guesscount)
